@@ -2,8 +2,8 @@
 public class PermissionPair
 {
     // Поля
-    public bool IsAdmin { get; set; }
-    public bool CanEdit { get; set; }
+    protected bool IsAdmin { get; set; }
+    protected bool CanEdit { get; set; }
 
     // Конструктор по умолчанию
     public PermissionPair()
