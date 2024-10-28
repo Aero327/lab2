@@ -6,8 +6,9 @@ public class Program
     {
         var p = new Program();
         
-        Console.WriteLine("1) тесты для 1 задания");
-        Console.WriteLine("2) тесты для 2 и 3 заданий (Money)");
+        Console.WriteLine("1) тесты для PermissionPair");
+        Console.WriteLine("2) тесты для AdvancedPermission");
+        Console.WriteLine("3) тесты для Money");
         Console.Write("\nВыберите желаемый тест: ");
 
         var input = Console.ReadLine();
@@ -17,7 +18,9 @@ public class Program
             switch (choice)
             {
                 case 1: p.PermissionPairTests(); break;
-                case 2: p.MoneyTests(); break;
+                case 2: p.AdvancedPermissionTests(); break;
+                case 3: p.MoneyTests(); break;
+                default: Console.WriteLine("Такого варианта нет"); break;
             }
         }
         else
@@ -37,7 +40,10 @@ public class Program
 
         var pair3 = new PermissionPair(pair2);
         Console.WriteLine("Конструктор копирования PermissionPair:\n" + pair3 + "\n");
+    }
 
+    private void AdvancedPermissionTests()
+    {
         // Тест дочернего класса AdvancedPermission
         var advanced1 = new AdvancedPermission();
         Console.WriteLine("Пустой конструктор AdvancedPermission (advanced1):\n" + advanced1 + "\n");

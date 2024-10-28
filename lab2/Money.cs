@@ -70,7 +70,7 @@ public class Money
 
     public static implicit operator bool(Money money)
     {
-        return money.rubles + money.kopeks > 0;
+        return money.rubles * 100 + money.kopeks > 0;
     }
 
     public static Money operator -(Money m, byte kopeks)
